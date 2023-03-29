@@ -23,3 +23,11 @@ function validarDatos(){
     }
    }
     document.querySelector('form').addEventListener('submit',validarDatos)
+
+function enviarFormulario() {
+        var nombre = document.getElementById("nombre").value;
+        var email = document.getElementById("email").value;
+        var asunto = document.getElementById("asunto").value;
+        var mensaje = document.getElementById("mensaje").value;
+        window.location.href = "mailto:christian264@hotmail.com?subject=" + asunto + "&body=" + nombre + " (" + email + "): " + mensaje;
+    }
