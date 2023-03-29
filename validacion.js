@@ -33,19 +33,16 @@ function validarDatos() {
   document.querySelector("form").addEventListener("submit", validarDatos);
   
   function enviarCorreo() {
-    // Obtener los valores del formulario
     var nombre = document.forms["form"]["nombre"].value;
     var email = document.forms["form"]["email"].value;
     var asunto = document.forms["form"]["asunto"].value;
     var mensaje = document.forms["form"]["mensaje"].value;
   
-    // Construir el mensaje de correo electrónico
     var body = "Nombre: " + nombre + "\n";
     body += "Email: " + email + "\n";
     body += "Asunto: " + asunto + "\n";
     body += "Mensaje: " + mensaje;
   
-    // Crear una nueva ventana de correo electrónico
     var link =
       "mailto:christian264@hotmail.com?subject=" +
       encodeURIComponent(asunto) +
